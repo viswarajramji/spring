@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="fortuneService"
+		class="com.app.service.HappyFortuneService"></bean>
+
+	<bean id="baseBall" class="com.app.service.BaseBallCoach">
+		<property name="fortuneService" ref="fortuneService" />
+		<property name="emailAddress"
+			value="viswarajramji.kumar@shan.com" />
+		<property name="phoneNumber" value="9731200663" />
+	</bean>
+	<bean id="cricket" class="com.app.service.CricketCoach">
+		<property name="fortuneService" ref="fortuneService" />
+		<property name="emailAddress" value="shanMicheal@gmail.com" />
+		<property name="phoneNumber" value="9994962797" />
+	</bean>
+
+</beans>
+
+
+
+
+
