@@ -10,9 +10,11 @@ public class MyApplication {
 		Games game = context.getBean("cricket", Games.class);
 		System.out.println(game.getName());
 		System.out.println(game.getRules());
+		System.out.println(game.getPlayerName());
 		game = context.getBean("football", Games.class);
 		System.out.println(game.getName());
 		System.out.println(game.getRules());
+		System.out.println(game.getPlayerName());
 		context.close();
 	}
 }
