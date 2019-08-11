@@ -13,5 +13,6 @@ public class MyApplication {
 		game = context.getBean("football", Games.class);
 		System.out.println(game.getName());
 		System.out.println(game.getRules());
+		context.close();
 	}
 }
