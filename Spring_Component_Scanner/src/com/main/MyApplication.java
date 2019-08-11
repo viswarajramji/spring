@@ -18,11 +18,6 @@ public class MyApplication {
 		System.out.println(game.getRules());
 		System.out.println(game.getPlayerName());
 		
-		game = context.getBean("hockeySetter", Games.class);
-		System.out.println(game.getName());
-		System.out.println(game.getRules());
-		System.out.println(game.getPlayerName());
-		
 		context.close();
 		
 	}

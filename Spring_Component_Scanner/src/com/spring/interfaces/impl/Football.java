@@ -1,6 +1,7 @@
 package com.spring.interfaces.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.spring.interfaces.Games;
@@ -10,6 +11,7 @@ import com.spring.interfaces.Players;
 public class Football implements Games {
 
 	@Autowired
+	@Qualifier("playerShan")
 	private Players playerService;
 
 	@Override

@@ -4,12 +4,12 @@ import org.springframework.stereotype.Component;
 
 import com.spring.interfaces.Players;
 
-@Component
-public class PlayersImpl implements Players {
+@Component("playerShan")
+public class PlayerShan implements Players {
 
 	@Override
 	public String getName() {
-		return "My Name is hello";
+		return "My name is shan";
 	}
 
 }
