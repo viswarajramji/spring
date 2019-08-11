@@ -9,11 +9,13 @@ import com.spring.interfaces.Players;
 @Component("hockeySetter")
 public class HockeySetter implements Games {
 
-	private Players playerService;
+	private Players playerServiceSetter;
+
+	private Players playerServiceMethod;
 
 	@Override
 	public String getName() {
-		return "My Name is viswarajramji";
+		return playerServiceSetter.getName();
 	}
 
 	@Override
@@ -23,16 +25,17 @@ public class HockeySetter implements Games {
 
 	@Override
 	public String getPlayerName() {
-		return playerService.getName();
+		return playerServiceMethod.getName();
 	}
 
-	public Players getPlayerService() {
-		return playerService;
+	@Autowired
+	public void doSome(Players playerService) {
+		this.playerServiceMethod = playerService;
 	}
 
 	@Autowired
 	public void setPlayerService(Players playerService) {
-		this.playerService = playerService;
+		this.playerServiceSetter = playerService;
 	}
 
 }
