@@ -29,6 +29,12 @@
 			<form:option value="USA" label="United States"></form:option>
 		</form:select>
 
+		<form:radiobutton path="phone" value="Java" /> Java
+		<form:radiobutton path="phone" value="oracle" /> Oracle
+		<form:radiobutton path="phone" value="Google" /> Google
+		<form:radiobutton path="phone" value="Microsoft" /> Microsoft
+		
+
 		<br>
 		<br>
 

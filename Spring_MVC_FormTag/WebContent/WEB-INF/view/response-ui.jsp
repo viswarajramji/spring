@@ -12,5 +12,7 @@
 	Last Name : ${student.lastName}
 	<hr />
 	Country : ${student.country}
+	<hr />
+	Phone : ${student.phone}
 </body>
 </html>

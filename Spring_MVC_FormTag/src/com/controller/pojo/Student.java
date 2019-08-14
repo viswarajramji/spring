@@ -8,6 +8,8 @@ public class Student {
 
 	String country;
 
+	String phone;
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -30,6 +32,14 @@ public class Student {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 }

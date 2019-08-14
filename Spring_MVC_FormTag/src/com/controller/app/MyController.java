@@ -28,6 +28,7 @@ public class MyController {
 		System.out.println(student.getFirstName());
 		System.out.println(student.getLastName());
 		System.out.println(student.getCountry());
+		System.out.println(student.getPhone());
 		return "response-ui";
 	}
 
