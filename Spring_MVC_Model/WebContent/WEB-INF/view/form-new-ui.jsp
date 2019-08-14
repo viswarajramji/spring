@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Welcome page</title>
+<title>Form Page</title>
 </head>
 <body>
-	Welcome to my first app
-	<hr />
-	<a href="form">create form</a>
-	<a href="newform">create new form</a>
+	<form method="post" action="submitRequestParams">
+		<input type="text" name="textbox" /> 
+		<input type="submit" name="submit" />
+	</form>
 </body>
 </html>
