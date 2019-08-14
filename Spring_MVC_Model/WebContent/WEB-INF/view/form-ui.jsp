@@ -7,9 +7,16 @@
 <title>Form Page</title>
 </head>
 <body>
-	<form method="post" action="submit">
-		<input type="text" name="textbox" /> 
-		<input type="submit" name="submit" />
+	<form method="post" action="hello1/submit">
+		<input type="text" name="textbox" /> <input type="submit"
+			name="submit" />
+	</form>
+
+	<hr />
+	
+	<form method="post" action="hello2/submit">
+		<input type="text" name="textbox" /> <input type="submit"
+			name="submit" />
 	</form>
 </body>
 </html>

@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class MySpringController {
+@RequestMapping("/hello1")
+public class MySpringController1 {
 
 	@RequestMapping("/")
 	public String getHomePage() {
@@ -20,21 +21,11 @@ public class MySpringController {
 		return "form-ui";
 	}
 
-	@RequestMapping("/newform")
-	public String getNewPage() {
-		return "form-new-ui";
-	}
 
 	@RequestMapping("/submit")
 	public String getFormSubmit(HttpServletRequest request, Model model) {
 		String textbox = request.getParameter("textbox");
 		model.addAttribute("message", textbox);
-		return "submit-ui";
-	}
-
-	@RequestMapping("/submitRequestParams")
-	public String getFormSubmitParams(@RequestParam("textbox") String name, Model model) {
-		model.addAttribute("message", name);
 		return "submit-ui";
 	}
 

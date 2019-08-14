@@ -9,7 +9,7 @@
 <body>
 	Welcome to my first app
 	<hr />
-	<a href="form">create form</a>
-	<a href="newform">create new form</a>
+	<a href="hello1/form">create form</a>
+	<a href="hello2/form">create new form</a>
 </body>
 </html>
