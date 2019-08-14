@@ -1,10 +1,12 @@
 package com.controller.pojo;
 
 public class Student {
-	
+
 	String firstName;
-	
+
 	String lastName;
+
+	String country;
 
 	public String getFirstName() {
 		return firstName;
@@ -20,6 +22,14 @@ public class Student {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 }

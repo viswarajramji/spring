@@ -27,6 +27,7 @@ public class MyController {
 		model.addAttribute("student",student);
 		System.out.println(student.getFirstName());
 		System.out.println(student.getLastName());
+		System.out.println(student.getCountry());
 		return "response-ui";
 	}
 
