@@ -10,6 +10,8 @@ public class Student {
 
 	String phone;
 
+	String company;
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -40,6 +42,14 @@ public class Student {
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public String getCompany() {
+		return company;
+	}
+
+	public void setCompany(String company) {
+		this.company = company;
 	}
 
 }

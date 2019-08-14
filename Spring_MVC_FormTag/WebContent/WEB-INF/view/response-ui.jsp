@@ -14,5 +14,7 @@
 	Country : ${student.country}
 	<hr />
 	Phone : ${student.phone}
+	<hr />
+	Company : ${student.company}
 </body>
 </html>

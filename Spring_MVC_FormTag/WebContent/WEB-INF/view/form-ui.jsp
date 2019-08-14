@@ -33,13 +33,15 @@
 		<form:radiobutton path="phone" value="oracle" /> Oracle
 		<form:radiobutton path="phone" value="Google" /> Google
 		<form:radiobutton path="phone" value="Microsoft" /> Microsoft
+
+		<br>
+		<br>
+
+		<form:checkbox path="company" value="Google" /> Google
+		<form:checkbox path="company" value="MS" /> Microsoft
+		<form:checkbox path="company" value="facebook" /> FaceBook
+		<form:checkbox path="company" value="Amazon" /> Amazon
 		
-
-		<br>
-		<br>
-
-
-
 		<input type="submit" value="Submit" />
 
 
