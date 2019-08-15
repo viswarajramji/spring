@@ -19,7 +19,6 @@ public class MyAppDelete {
 			session.delete(instructor);
 			session.getTransaction().commit();
 			session.close();
-
 		} finally {
 			sessionFactory.close();
 		}

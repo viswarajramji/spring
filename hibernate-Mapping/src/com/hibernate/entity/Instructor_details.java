@@ -1,10 +1,12 @@
 package com.hibernate.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,6 +23,9 @@ public class Instructor_details {
 
 	@Column(name = "hobby")
 	private String hobby;
+
+	@OneToOne(mappedBy = "instructor_details", cascade = CascadeType.ALL)
+	private Instructor instructor;
 
 	public Instructor_details() {
 
@@ -54,6 +59,14 @@ public class Instructor_details {
 
 	public void setHobby(String hobby) {
 		this.hobby = hobby;
+	}
+
+	public Instructor getInstructor() {
+		return instructor;
+	}
+
+	public void setInstructor(Instructor instructor) {
+		this.instructor = instructor;
 	}
 
 }

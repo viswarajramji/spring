@@ -14,8 +14,8 @@ public class MyApplication {
 		try {
 			Session session = sessionFactory.getCurrentSession();
 			session.beginTransaction();
-			Instructor_details instr_details = new Instructor_details("www.youtube.com", "programmer");
-			Instructor instr = new Instructor("Viswa", "raj", "viswaraj@gmail.com");
+			Instructor_details instr_details = new Instructor_details("www.bidirectional.com1", "programmer");
+			Instructor instr = new Instructor("one_to_one1", "raj", "viswaraj@gmail.com");
 			instr.setInstructor_details(instr_details);
 			session.save(instr);
 			session.getTransaction().commit();
