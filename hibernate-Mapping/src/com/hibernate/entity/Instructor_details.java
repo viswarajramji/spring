@@ -22,6 +22,10 @@ public class Instructor_details {
 	@Column(name = "hobby")
 	private String hobby;
 
+	public Instructor_details() {
+
+	}
+
 	public Instructor_details(String channelName, String hobby) {
 		super();
 		this.channelName = channelName;

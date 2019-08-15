@@ -34,6 +34,10 @@ public class Instructor {
 	@JoinColumn(name = "instructor_details_id")
 	private Instructor_details instructor_details;
 
+	public Instructor() {
+
+	}
+
 	public Instructor(String firstName, String lastName, String emailId) {
 		super();
 		this.firstName = firstName;

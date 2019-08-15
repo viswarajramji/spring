@@ -7,17 +7,16 @@ import org.hibernate.cfg.Configuration;
 import com.hibernate.entity.Instructor;
 import com.hibernate.entity.Instructor_details;
 
-public class MyApplication {
+public class MyAppDelete {
 	public static void main(String[] args) {
 		SessionFactory sessionFactory = new Configuration().configure().addAnnotatedClass(Instructor.class)
 				.addAnnotatedClass(Instructor_details.class).buildSessionFactory();
 		try {
+			int id=1;
 			Session session = sessionFactory.getCurrentSession();
 			session.beginTransaction();
-			Instructor_details instr_details = new Instructor_details("www.youtube.com", "programmer");
-			Instructor instr = new Instructor("Viswa", "raj", "viswaraj@gmail.com");
-			instr.setInstructor_details(instr_details);
-			session.save(instr);
+			Instructor instructor=session.get(Instructor.class, id);
+			session.delete(instructor);
 			session.getTransaction().commit();
 			session.close();
 
