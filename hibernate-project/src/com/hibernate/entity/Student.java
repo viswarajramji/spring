@@ -7,8 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GeneratorType;
-
 @Entity
 @Table(name = "Student")
 public class Student {
@@ -70,4 +68,9 @@ public class Student {
 		this.emailId = emailId;
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return " " + id + " " + firstName + " " + LastName + " " + emailId;
+	}
 }
