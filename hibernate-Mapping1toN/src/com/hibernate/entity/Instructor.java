@@ -1,88 +1,113 @@
 package com.hibernate.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "instructor")
 public class Instructor {
+	// annotate the class as an entity and map to db table
+	
+		// define the fields
+		
+		// annotate the fields with db column names
+		
+		// ** set up mapping to InstructorDetail entity
+		
+		// create constructors
+		
+		// generate getter/setter methods
+		
+		// generate toString() method
 
-	@Id
-	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+		@Id
+		@GeneratedValue(strategy=GenerationType.IDENTITY)
+		@Column(name="id")
+		private int id;
+		
+		@Column(name="first_name")
+		private String firstName;
+		
+		@Column(name="last_name")
+		private String lastName;
 
-	@Column(name = "first_name")
-	private String firstName;
+		@Column(name="email")
+		private String email;
 
-	@Column(name = "last_name")
-	private String lastName;
+		@OneToMany(mappedBy="instructor",
+				   cascade= CascadeType.ALL)
+		private List<Course> courses;
+		
+		
+		public Instructor() {
+			
+		}
 
-	@Column(name = "email")
-	private String emailId;
+		public Instructor(String firstName, String lastName, String email) {
+			this.firstName = firstName;
+			this.lastName = lastName;
+			this.email = email;
+		}
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "instructor_details_id")
-	private Instructor_details instructor_details;
+		public int getId() {
+			return id;
+		}
 
-	public Instructor() {
+		public void setId(int id) {
+			this.id = id;
+		}
 
-	}
+		public String getFirstName() {
+			return firstName;
+		}
 
-	public Instructor(String firstName, String lastName, String emailId) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.emailId = emailId;
-	}
+		public void setFirstName(String firstName) {
+			this.firstName = firstName;
+		}
 
-	public int getId() {
-		return id;
-	}
+		public String getLastName() {
+			return lastName;
+		}
 
-	public void setId(int id) {
-		this.id = id;
-	}
+		public void setLastName(String lastName) {
+			this.lastName = lastName;
+		}
 
-	public String getFirstName() {
-		return firstName;
-	}
+		public String getEmail() {
+			return email;
+		}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+		public void setEmail(String email) {
+			this.email = email;
+		}
 
-	public String getLastName() {
-		return lastName;
-	}
+		public List<Course> getCourses() {
+			return courses;
+		}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getEmailId() {
-		return emailId;
-	}
-
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
-	}
-
-	public Instructor_details getInstructor_details() {
-		return instructor_details;
-	}
-
-	public void setInstructor_details(Instructor_details instructor_details) {
-		this.instructor_details = instructor_details;
-	}
-
+		public void setCourses(List<Course> courses) {
+			this.courses = courses;
+		}
+		
+		// add convenience methods for bi-directional relationship
+		
+		public void add(Course tempCourse) {
+			
+			if (courses == null) {
+				courses = new ArrayList<>();
+			}
+			
+			courses.add(tempCourse);
+			
+			tempCourse.setInstructor(this);
+		}
 }
