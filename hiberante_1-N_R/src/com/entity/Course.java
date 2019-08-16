@@ -11,8 +11,18 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "courses")
+@Table(name = "course")
 public class Course {
+
+	// define our fields
+
+	// define constructors
+
+	// define getter setters
+
+	// define tostring
+
+	// annotate fields
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,11 +33,14 @@ public class Course {
 	private String title;
 
 	@ManyToOne(cascade = { CascadeType.ALL })
-	@JoinColumn(name = "admin_id")
-	private Admin admin;
+	@JoinColumn(name = "instructor_id")
+	private Instructor instructor;
+
+	public Course() {
+
+	}
 
 	public Course(String title) {
-		super();
 		this.title = title;
 	}
 
@@ -47,12 +60,16 @@ public class Course {
 		this.title = title;
 	}
 
-	public Admin getAdmin() {
-		return admin;
+	public Instructor getInstructor() {
+		return instructor;
 	}
 
-	public void setAdmin(Admin admin) {
-		this.admin = admin;
+	public void setInstructor(Instructor instructor) {
+		this.instructor = instructor;
 	}
 
+	@Override
+	public String toString() {
+		return "Course [id=" + id + ", title=" + title + "]";
+	}
 }
