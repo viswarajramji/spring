@@ -20,11 +20,15 @@ public class MyController {
 	public String showAdmin() {
 		return "admin";
 	}
-	
+
 	@GetMapping("/manager")
 	public String showManager() {
 		return "admin";
 	}
 
+	@GetMapping("/notAuthorized")
+	public String notAuthorized() {
+		return "access_deined";
+	}
 
 }
