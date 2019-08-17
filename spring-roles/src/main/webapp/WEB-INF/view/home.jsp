@@ -13,8 +13,15 @@
 </body>
 <security:authentication property="principal.username" />
 <security:authentication property="principal.authorities" />
-<a href="${pageContext.request.contextPath}/admin">for admins only</a>
-<a href="${pageContext.request.contextPath}/manager">for manager only</a>
+
+<security:authorize access="hasRole('ADMIN')">
+	<a href="${pageContext.request.contextPath}/admin">for admins only</a>
+</security:authorize>
+
+<security:authorize access="hasRole('MANAGER')">
+	<a href="${pageContext.request.contextPath}/manager">for manager
+		only</a>
+</security:authorize>
 
 <form:form method="post"
 	action="${pageContext.request.contextPath}/logout">
