@@ -8,9 +8,8 @@
 </head>
 
 <body>
-
-List Customers - coming soon ...
-
+	<a href="${pageContext.request.contextPath}/listdata"> List data </a>
+	<a href="${pageContext.request.contextPath}/showForm"> List data </a>
 </body>
 
 </html>

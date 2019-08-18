@@ -7,6 +7,10 @@ sol:
 netstat -ano
 
 
+auto create - table
+https://stackoverflow.com/questions/21069687/hibernate-auto-create-database/31422939
+
+
 port blocked by 8005 
 solution:
 Check if port 8005 is really in use by Windows :
