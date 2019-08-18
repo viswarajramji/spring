@@ -9,4 +9,8 @@ public interface CustomerDAO {
 	List<Customer> getCustomerList();
 	
 	boolean save(Customer customer);
+	
+	Customer getCustomerById(int customer_id);
+	
+	void deleteCustomerById(int customer_id);
 }

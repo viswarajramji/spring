@@ -19,6 +19,7 @@
 	</div>
 	<div id="container">
 		<form:form modelAttribute="customer" action="saveForm">
+			<form:hidden path="id"/>
 			<form:input path="name" />
 			<form:input path="email" />
 			<input type="submit" name="submit" />
