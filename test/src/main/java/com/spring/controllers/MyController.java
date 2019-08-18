@@ -45,12 +45,5 @@ public class MyController {
 		return list.get(student_id);
 	}
 
-	@ExceptionHandler
-	public ResponseEntity<StudentErrResponse> studentErrorResponse(StudentNotFoundException exec) {
-		StudentErrResponse error = new StudentErrResponse();
-		error.setStatus(HttpStatus.NOT_FOUND.value());
-		error.setMessage(exec.getMessage());
-		error.setTimeStamp(System.currentTimeMillis());
-		return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
-	}
+	
 }
