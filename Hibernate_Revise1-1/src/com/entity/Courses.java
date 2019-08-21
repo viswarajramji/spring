@@ -1,10 +1,12 @@
 package com.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,6 +23,17 @@ public class Courses {
 
 	@Column(name = "address")
 	private String address;
+
+	@OneToOne(mappedBy = "courses", cascade = { CascadeType.ALL })
+	private Students student;
+
+	public Students getStudent() {
+		return student;
+	}
+
+	public void setStudent(Students student) {
+		this.student = student;
+	}
 
 	public Courses() {
 	}

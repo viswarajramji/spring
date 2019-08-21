@@ -14,13 +14,12 @@ public class MyApplicationGet {
 		try {
 			Session session = sessionFactory.getCurrentSession();
 			session.beginTransaction();
-			Students student = session.get(Students.class, 1);
+			Courses student = session.get(Courses.class, 1);
 			session.getTransaction().commit();
 			System.out.println(student.getId());
 			System.out.println(student.getName());
-			System.out.println(student.getCourses().getAddress());
+			System.out.println(student.getStudent().getName());
 			System.out.println(student.getId());
-
 
 		} finally {
 			sessionFactory.close();
