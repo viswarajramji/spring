@@ -15,4 +15,11 @@ public class MyController {
 	public String testHomePage() {
 		return "home";
 	}
+
+	@GetMapping("/formLogin")
+	public String formLogin() {
+		return "login";
+	}
+	
+	
 }
