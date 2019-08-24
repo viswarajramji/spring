@@ -30,4 +30,9 @@ public class MyAppl {
 	public String employee() {
 		return "employee";
 	}
+	
+	@RequestMapping("/noauthorization")
+	public String noauthorization() {
+		return "noauthorization";
+	}
 }

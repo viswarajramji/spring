@@ -20,11 +20,9 @@ public class DispatcherSecurity extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests()
-		        .antMatchers("/").hasAnyRole("EMPLOYEE")
-		        .antMatchers("/employee/**").hasAnyRole("EMPLOYEE")
-		        .antMatchers("/manager/**").hasAnyRole("MANAGER").and().formLogin()
+		http.authorizeRequests().antMatchers("/").hasAnyRole("EMPLOYEE").antMatchers("/employee/**")
+				.hasAnyRole("EMPLOYEE").antMatchers("/manager/**").hasAnyRole("MANAGER").and().formLogin()
 				.loginPage("/showFormLogin").loginProcessingUrl("/authenticateTheUser").permitAll().and().logout()
-				.permitAll();
+				.permitAll().and().exceptionHandling().accessDeniedPage("/noauthorization");
 	}
 }
