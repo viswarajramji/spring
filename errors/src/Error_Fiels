@@ -6,6 +6,9 @@ find all running process:
 sol:
 netstat -ano
 
+killing ruuning process window
+https://stackoverflow.com/questions/23432651/terminating-mvn-spring-bootrun-doesnt-stop-tomcat
+
 
 auto create - table
 https://stackoverflow.com/questions/21069687/hibernate-auto-create-database/31422939
