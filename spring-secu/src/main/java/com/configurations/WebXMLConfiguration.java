@@ -1,19 +1,19 @@
-package com.configuration;
+package com.configurations;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class WebXMLServletDispatcher extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class WebXMLConfiguration extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
 		// TODO Auto-generated method stub
-		return new Class[] {WebXMLSecurityServletDispatcher.class,DispatcherServletSecurity.class};
+		return new Class[] { DispatcherSecurity.class };
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		// TODO Auto-generated method stub
-		return new Class[] { DispatchServletConfiguration.class };
+		return new Class[] { DispatcherServlet.class };
 	}
 
 	@Override

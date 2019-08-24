@@ -1,4 +1,4 @@
-package Viswarajramji.spring_sec;
+package shan.spring_secu;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
